@@ -89,6 +89,7 @@ public class MessageReceiverController {
 
 		LOG.debug("转换后的消息对象\n{}\n", inMessage);
 
+		// 最好使用自己的拼音名作为前缀，后缀是消息类型
 		String channel = "kemao_2_" + inMessage.getMsgType();
 		// 把消息丢入队列
 		// 1.完成对象的序列化
