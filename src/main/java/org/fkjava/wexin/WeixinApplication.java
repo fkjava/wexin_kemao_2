@@ -28,7 +28,7 @@ public class WeixinApplication {
 		RedisTemplate<String, ? extends InMessage> template = new RedisTemplate<>();
 		template.setConnectionFactory(connectionFactory);
 		// 使用序列化程序完成对象的序列化和反序列化，可以自定义
-		template.setValueSerializer(new JsonRedisSerializer<InMessage>());
+		template.setValueSerializer(new JsonRedisSerializer());
 
 		return template;
 	}
